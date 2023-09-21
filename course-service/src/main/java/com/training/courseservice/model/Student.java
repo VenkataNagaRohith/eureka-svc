@@ -1,13 +1,32 @@
 package com.training.courseservice.model;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-@Data
-@NoArgsConstructor
 public class Student {
 	
 	
+	public String getStudName() {
+		return studName;
+	}
+
+	public void setStudName(String studName) {
+		this.studName = studName;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getGrade() {
+		return grade;
+	}
+
+	public void setGrade(String grade) {
+		this.grade = grade;
+	}
+
 	private long studId;
 	private String studName;
 	private int age;

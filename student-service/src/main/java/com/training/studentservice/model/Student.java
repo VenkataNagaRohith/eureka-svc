@@ -5,14 +5,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-@Data
-@NoArgsConstructor
+import javax.persistence.Table;
 @Entity
-//@Table(name="STUD")
+@Table
 public class Student {
 	
 	@Id
@@ -23,9 +18,37 @@ public class Student {
 	@Column(name="stud_grade")
 	private String grade;
 	
+	public Student() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	public Student(String studName, int age, String grade){
 		this.studName = studName;
 		this.age = age;
+		this.grade = grade;
+	}
+
+	public String getStudName() {
+		return studName;
+	}
+
+	public void setStudName(String studName) {
+		this.studName = studName;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getGrade() {
+		return grade;
+	}
+
+	public void setGrade(String grade) {
 		this.grade = grade;
 	}
 
